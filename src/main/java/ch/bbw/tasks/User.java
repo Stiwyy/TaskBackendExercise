@@ -1,37 +1,48 @@
 package ch.bbw.tasks;
 
-public class Task {
-    private long id;
-    private String description;
-    private boolean completed;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-    public Task(long id, String description, boolean completed) {
-        this.id = id;
-        this.description = description;
-        this.completed = completed;
-    }
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String username;
+    private String password;
+    private String email;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
+    public String getUsername() {
+        return username;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public boolean isCompleted() {
-        return completed;
+    public String getPassword() {
+        return password;
     }
 
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
