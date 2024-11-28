@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>ch.bbw</groupId>
-	<artifactId>tasks</artifactId>
+	<artifactId>volleyballBackend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tasks</name>
 	<description>Demo project for Spring Boot</description>
